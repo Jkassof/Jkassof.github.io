@@ -126,6 +126,7 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
   background-color: {{ site.navbar-col | default: "#F5F5F5" }};
   border-bottom: 1px solid {{ site.navbar-border-col | default: "#EAEAEA" }};
   font-family: 'Roboto', sans-serif;
@@ -149,7 +150,7 @@ img {
   line-height: 1.5;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
 }
 
 .navbar-custom .navbar-brand-logo {
@@ -188,7 +189,7 @@ img {
 
 .navbar-custom .navbar-nav .nav-item {
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 1.125rem;
   letter-spacing: 0.0625rem;
 }
 
@@ -202,7 +203,7 @@ img {
 
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
-  font-weight: 800;
+  font-weight: 500;
   color: {{ site.navbar-text-col | default: "#404040" }};
 }
 
@@ -225,8 +226,8 @@ img {
 
 @media (min-width: 768px) {
   .navbar-custom {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
   }
 
   .navbar-custom .navbar-brand-logo {
@@ -334,8 +335,8 @@ img {
   margin-left: -50%;
   {% unless site.round-avatar == false %}
     border-radius: 50%;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, .8);
-    -webkit-box-shadow: 0 0 0.3125rem rgba(0, 0, 0, .8);
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 0 0.3125rem rgba(0, 0, 0, .2);
     -moz-box-shadow: 0 0 0.5rem rgba(0, 0, 0, .8);
   {% endunless %}
 }
@@ -359,7 +360,7 @@ img {
   .navbar-custom .avatar-container .avatar-img-border {
     width: 100%;
     {% unless site.round-avatar == false %}
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
+    box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, .2);
     -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
     -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
     {% endunless %}
@@ -645,7 +646,7 @@ footer .footer-custom-content {
     padding: 9.375rem 0;
   }
   .intro-header .page-heading h1 {
-    font-size: 5rem;
+    font-size: 3.25rem;
   }
   .intro-header .post-heading h1 {
     font-size: 3.125rem;
@@ -915,4 +916,39 @@ pre {
   color: #808080;
   font-style: italic;
   font-size: 1rem;
+}
+
+.aboutme-section {
+  margin-top: -25px;
+}
+
+.about-item {
+  display: flex;
+  align-items:center;
+  padding:10px;
+}
+
+.about-icon {
+  font-size: 2.5em;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.about-text {
+  display: inline-block;
+  text-align: justify;
+}
+
+.about-text > ul {
+  padding-inline-start: 10px;
+  list-style:none;
+  margin-bottom: 0px;
+}
+
+.about-text > ul li:before {
+  content:"\2192 \0020";
+}
+
+.mymap {
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.8))
 }
